@@ -8,7 +8,7 @@ const OUTPUT_MESSAGE = Object.freeze({
   amount: (n) => `\n${n}개를 구매했습니다.`,
   lotto: (nums) => `[${nums.join(", ")}]`,
   stats: "\n당첨 통계",
-  divide: "\n---",
+  divide: "---",
   fifth: (n) => `3개 일치 (5,000원) - ${n}개`,
   fourth: (n) => `4개 일치 (50,000원) - ${n}개`,
   third: (n) => `5개 일치 (1,500,000원) - ${n}개`,

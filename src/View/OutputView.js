@@ -15,6 +15,7 @@ const OutputView = {
   // 당첨 통계 문구 출력
   printStats() {
     Console.print(OUTPUT_MESSAGE.stats);
+    Console.print(OUTPUT_MESSAGE.divide);
   },
   // 당첨 내역 출력
   printFifth(n) {
