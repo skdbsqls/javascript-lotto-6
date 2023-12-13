@@ -1,3 +1,4 @@
+import Stats from "../Model/Stats.js";
 import Price from "../Model/Price.js";
 import Lotto from "../Model/Lotto.js";
 import Bonus from "../Model/Bonus.js";
@@ -46,7 +47,6 @@ class Controller {
     try {
       const input = await InputView.readWinNum();
       this.#winNum = new Lotto(input).getLotto();
-      // console.log(this.#winNum, [1, 2, 3, 4, 5, 6]);
     } catch (error) {
       Console.print(error.message);
       return this.#executeWinNum();
@@ -58,7 +58,6 @@ class Controller {
     try {
       const bonus = await InputView.readBonusNum();
       this.#bonusNum = new Bonus(this.#winNum, bonus).getBonus();
-      // console.log(this.#bonusNum, 7);
     } catch (error) {
       Console.print(error.message);
       return this.#executeBonusNum();
@@ -67,7 +66,15 @@ class Controller {
 
   // 로또 당첨
   #executeWinning() {
-    OutputView.printStats();
+    const stats = new Stats(
+      this.#lottos,
+      this.#winNum,
+      this.#bonusNum,
+      this.#price
+    );
+    stats.printStats();
+    const rate = stats.calculateRate(this.#price);
+    OutputView.printRate(rate);
   }
 }
 
