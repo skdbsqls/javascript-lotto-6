@@ -1,13 +1,14 @@
 const INPUT_MESSAGE = Object.freeze({
   price: "구입금액을 입력해 주세요.\n",
-  win: "\n당첨 번호를 입력해 주세요.\n",
-  bonus: "\n보너스 번호를 입력해 주세요.\n",
+  winNum: "\n당첨 번호를 입력해 주세요.\n",
+  bonusNum: "\n보너스 번호를 입력해 주세요.\n",
 });
 
 const OUTPUT_MESSAGE = Object.freeze({
   amount: "\n${n}개를 구매했습니다.",
   lotto: (nums) => `[${nums}]`,
-  stats: "\n당첨 통계\n---",
+  stats: "\n당첨 통계",
+  divide: "\n---",
   fifth: (n) => `3개 일치 (5,000원) - ${n}개`,
   fourth: (n) => `4개 일치 (50,000원) - ${n}개`,
   third: (n) => `5개 일치 (1,500,000원) - ${n}개`,
