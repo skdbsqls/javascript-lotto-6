@@ -1,6 +1,5 @@
 import { Console } from "@woowacourse/mission-utils";
 import { INPUT_MESSAGE } from "../constants/message.js";
-import InputValidate from "../utils/validation/InputValidate.js";
 
 const InputView = {
   // 구입 금액 입력
