@@ -8,10 +8,12 @@ class Price {
     this.#price = Number(input);
   }
 
+  // 구입 금액 예외 처리
   #validate(input) {
     PriceValidate(input);
   }
 
+  // 구입 금액 구하기
   getPrice() {
     return Number(this.#price);
   }
