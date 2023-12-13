@@ -1,4 +1,3 @@
-import Lotto from "../Lotto.js";
 import { MissionUtils } from "@woowacourse/mission-utils";
 
 class Machine {
@@ -18,7 +17,7 @@ class Machine {
   getLottos() {
     for (let i = 0; i < this.amount; i++) {
       const nums = MissionUtils.Random.pickUniqueNumbersInRange(1, 45, 6);
-      const lotto = new Lotto(nums).getLotto();
+      const lotto = nums.sort((a, b) => a - b); // 오름차순
 
       this.#lottos.push(lotto);
     }
