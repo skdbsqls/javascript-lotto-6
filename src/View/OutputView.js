@@ -3,12 +3,14 @@ import { OUTPUT_MESSAGE } from "../constants/message.js";
 
 const OutputView = {
   // 구매 로또 수량 출력
-  printAmount() {
-    Console.print(OUTPUT_MESSAGE.amount);
+  printAmount(amount) {
+    Console.print(OUTPUT_MESSAGE.amount(amount));
   },
   // 발행 로또 출력
-  printLotto(nums) {
-    Console.print(OUTPUT_MESSAGE.lotto(nums));
+  printLottos(lottos) {
+    lottos.forEach((lotto) => {
+      Console.print(OUTPUT_MESSAGE.lotto(lotto));
+    });
   },
   // 당첨 통계 문구 출력
   printStats() {

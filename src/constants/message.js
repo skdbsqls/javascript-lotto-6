@@ -5,8 +5,8 @@ const INPUT_MESSAGE = Object.freeze({
 });
 
 const OUTPUT_MESSAGE = Object.freeze({
-  amount: "\n${n}개를 구매했습니다.",
-  lotto: (nums) => `[${nums}]`,
+  amount: (n) => `\n${n}개를 구매했습니다.`,
+  lotto: (nums) => `[${nums.join(", ")}]`,
   stats: "\n당첨 통계",
   divide: "\n---",
   fifth: (n) => `3개 일치 (5,000원) - ${n}개`,
