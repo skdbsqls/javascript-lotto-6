@@ -15,7 +15,7 @@ class Lotto {
 
   // TODO: 추가 기능 구현
   getLotto() {
-    return this.#numbers;
+    return this.#numbers.split(",").map((num) => Number(num));
   }
 }
 

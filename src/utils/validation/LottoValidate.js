@@ -17,8 +17,7 @@ const LottoValidate = {
   },
 
   // 보너스 번호 예외 처리
-  BonusNumValidate(winNum, bonusNum) {
-    const winNumArr = MakeArray(winNum);
+  BonusNumValidate(winNumArr, bonusNum) {
     const bonusNumArr = [bonusNum];
 
     LottoCheck.checkNumber(bonusNumArr);

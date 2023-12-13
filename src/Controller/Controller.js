@@ -19,6 +19,7 @@ class Controller {
     this.#executePublish();
     await this.#executeWinNum();
     await this.#executeBonusNum();
+    this.#executeWinning();
   }
 
   // 로또 구매
@@ -45,7 +46,7 @@ class Controller {
     try {
       const input = await InputView.readWinNum();
       this.#winNum = new Lotto(input).getLotto();
-      // console.log(this.#winNum, "1,2,3,4,5,6");
+      // console.log(this.#winNum, [1, 2, 3, 4, 5, 6]);
     } catch (error) {
       Console.print(error.message);
       return this.#executeWinNum();
@@ -62,6 +63,11 @@ class Controller {
       Console.print(error.message);
       return this.#executeBonusNum();
     }
+  }
+
+  // 로또 당첨
+  #executeWinning() {
+    OutputView.printStats();
   }
 }
 
