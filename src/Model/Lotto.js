@@ -14,8 +14,14 @@ class Lotto {
   }
 
   // TODO: 추가 기능 구현
+  // 로또 구하기
   getLotto() {
     return this.#numbers.split(",").map((num) => Number(num));
+  }
+
+  // 로또 번호 구하기
+  getNumbers() {
+    return this.#numbers;
   }
 }
 

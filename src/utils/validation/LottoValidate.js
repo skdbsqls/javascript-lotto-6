@@ -23,7 +23,7 @@ const LottoValidate = {
     LottoCheck.checkNumber(bonusNumArr);
     LottoCheck.checkRange(bonusNumArr);
 
-    if (winNumArr.includes(bonusNum)) {
+    if (winNumArr.includes(Number(bonusNum))) {
       throw new Error(ERROR_MESSAGE.duplicateBonus);
     }
   },
