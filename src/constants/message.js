@@ -18,13 +18,14 @@ const OUTPUT_MESSAGE = Object.freeze({
 });
 
 const ERROR_MESSAGE = Object.freeze({
-  notNum: "[ERROR] 구입금액은 숫자로 입력해 주세요.",
-  invalidPrice: "[ERROR] 구입금액은 1,000원 단위로 입력해 주세요.",
-  invalidLength: "[ERROR] 당첨 번호는 6개 숫자로 입력해 주세요.",
-  duplicateWin: "[ERROR] 당첨 번호는 중복되지 않는 숫자로 입력해 주세요.",
+  notNumPrice: "[ERROR] 구입금액은 숫자로 입력해 주세요.",
+  invalidUnit: "[ERROR] 구입금액은 1,000원 단위로 입력해 주세요.",
+  notNumLotto: "[ERROR] 로또 번호는 숫자로 입력해 주세요.",
+  invalidRange: "[ERROR] 로또 번호는 1에서 45까지 숫자로 입력해 주세요.",
   notSeparate: "[ERROR] 당첨 번호는 쉼표(,)를 기준으로 구분하여 입력해 주세요.",
-  invalidRangeWin: "[ERROR] 당첨 번호는 1에서 45까지 숫자로 입력해 주세요.",
-  invalidRangeBonus: "[ERROR] 보너스 번호는 1에서 45까지 숫자로 입력해 주세요.",
+  invalidLengthWin: "[ERROR] 당첨 번호는 6개 숫자로 입력해 주세요.",
+  duplicateWin: "[ERROR] 당첨 번호는 중복되지 않는 숫자로 입력해 주세요.",
+  invalidLengthBonus: "[ERROR] 보너스 번호는 1개 숫자로 입력해 주세요.",
   duplicateBonus:
     "[ERROR] 보너스 번호는 당첨 번호와 중복되지 않는 1개 숫자로 입력해 주세요.",
 });
