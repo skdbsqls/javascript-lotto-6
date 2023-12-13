@@ -13,16 +13,16 @@ const LottoValidate = {
     LottoCheck.checkNumber(winNumArr);
     LottoCheck.checkRange(winNumArr);
     LottoCheck.checkLengthWin(winNumArr);
-    LottoCheck.duplicateWin(winNumArr);
+    LottoCheck.checkDuplicate(winNumArr);
   },
 
   // 보너스 번호 예외 처리
   BonusNumValidate(winNum, bonusNum) {
     const winNumArr = MakeArray(winNum);
-    const bonusNumArr = [...bonusNum];
+    const bonusNumArr = [bonusNum];
 
-    LottoCheck.checkNumber(bonusArr);
-    LottoCheck.checkRange(bonusArr);
+    LottoCheck.checkNumber(bonusNumArr);
+    LottoCheck.checkRange(bonusNumArr);
 
     if (winNumArr.includes(bonusNumArr)) {
       throw new Error(ERROR_MESSAGE.duplicateBonus);
@@ -41,7 +41,7 @@ const MakeArray = (nums) => {
 const LottoCheck = {
   // 쉼표로 구분하지 않은 경우
   checkSeparate(nums) {
-    if (nums.includes(",")) {
+    if (!nums.includes(",")) {
       throw new Error(ERROR_MESSAGE.notSeparate);
     }
   },
